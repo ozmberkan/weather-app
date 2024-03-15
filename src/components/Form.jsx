@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 
-export default function Form({ setInfo, info }) {
+export default function Form({ setInfo }) {
 
     const [city, setCity] = useState('')
 
@@ -11,8 +11,10 @@ export default function Form({ setInfo, info }) {
         const apiKey = "c53e1a627609184e9edf62bca977a159";
         const BaseURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=tr`
 
-        axios.get(BaseURL).then(res => setInfo(res.data))
-        console.log();
+        axios.get(BaseURL).then(res => {
+            setInfo(res.data)
+            console.log(res.data);
+        })
     }
 
     return (

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className='container mx-auto mt-12'>
-      <Form setInfo={setInfo} info={info} />
+      <Form setInfo={setInfo} />
       <hr className='my-10' />
       <Info info={info} />
     </div>

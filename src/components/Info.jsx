@@ -1,7 +1,8 @@
 import React from 'react';
 
 export default function Info({ info }) {
-    const { main, weather, name, feels_like, temp } = info;
+
+    const { main, weather, name } = info;
 
     return (
         <div id='info' className='bg-zinc-100 bg-opacity-80 h-[300px] flex justify-center items-center gap-x-5 p-4'>
